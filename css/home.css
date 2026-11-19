@@ -10,7 +10,8 @@
     url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=2000&q=85")
       center/cover;
   display: flex;
-  min-height: 690px;
+  min-height: 720px;
+  padding: 10rem 0 5.5rem;
   position: relative;
 }
 .hero-section:after {
@@ -112,6 +113,7 @@
 @media (max-width: 767px) {
   .hero-section {
     min-height: 620px;
+    padding: 8rem 0 4rem;
   }
   .hero-content h1 {
     font-size: 3.3rem;
