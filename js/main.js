@@ -4,10 +4,77 @@
     localStorage.getItem("cinevault-theme") || "dark";
 
   document.getElementById("site-nav").innerHTML =
-    `<nav class="navbar navbar-expand-lg fixed-top"><div class="container"><a class="navbar-brand" href="${root}index.html"><span class="brand-mark"><i class="bi bi-film"></i></span><span>MovieVibe</span></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-label="Toggle navigation"><i class="bi bi-list"></i></button><div class="collapse navbar-collapse" id="mainNav"><ul class="navbar-nav me-auto mb-2 mb-lg-0"><li class="nav-item"><a class="nav-link" href="${root}index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="${root}pages/movies.html">Movies</a></li><li class="nav-item"><a class="nav-link" href="${root}pages/about.html">About</a></li></ul><div class="nav-actions"><form class="nav-search" action="${root}pages/movies.html" method="GET"><i class="bi bi-search"></i><input name="q" type="search" placeholder="Search movies, cast, director..." aria-label="Search movies"></form><a class="nav-icon-link" href="${root}pages/favorites.html" aria-label="Favorites"><i class="bi bi-heart"></i><span id="favorite-count" class="favorite-count">0</span></a><button id="theme-toggle" class="nav-icon-btn" type="button" aria-label="Toggle theme"><i class="bi bi-sun"></i></button></div></div></div></nav>`;
+    `<nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="${root}index.html" aria-label="MovieVibe Home">
+          <img src="${root}images/logo.png" alt="MovieVibe Logo" class="brand-logo logo-dark" height="38">
+          <img src="${root}images/logo01.png" alt="MovieVibe Logo" class="brand-logo logo-light" height="38">
+        </a>
 
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-label="Toggle navigation">
+          <i class="bi bi-list"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="${root}index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="${root}pages/movies.html">Movies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="${root}pages/about.html">About</a>
+            </li>
+          </ul>
+
+          <div class="nav-actions">
+            <form class="nav-search" action="${root}pages/movies.html" method="GET">
+              <i class="bi bi-search"></i>
+              <input name="q" type="search" placeholder="Search movies, cast, director..." aria-label="Search movies">
+            </form>
+
+            <a class="nav-icon-link" href="${root}pages/favorites.html" aria-label="Favorites">
+              <i class="bi bi-heart"></i>
+              <span id="favorite-count" class="favorite-count">0</span>
+            </a>
+
+            <button id="theme-toggle" class="nav-icon-btn" type="button" aria-label="Toggle theme">
+              <i class="bi bi-sun"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>`;
   document.getElementById("site-footer").innerHTML =
-    `<footer class="site-footer"><div class="container d-flex flex-column flex-md-row justify-content-between gap-3"><div><a class="navbar-brand" href="${root}index.html"><span class="brand-mark"><i class="bi bi-film"></i></span><span>MovieVibe</span></a><p class="mb-0 mt-2">A modern movie discovery website with trailers, ratings, and details.</p></div><div class="footer-links"><a href="${root}pages/movies.html">Browse Movies</a><a href="${root}pages/favorites.html">Favorites</a><a href="${root}pages/about.html">About</a><span class="socials"><i class="bi bi-instagram"></i><i class="bi bi-twitter-x"></i><i class="bi bi-youtube"></i></span></div></div><div class="container copyright">© 2026 MovieVibe. All movie media & trailers belong to their respective copyright owners.</div></footer>`;
+    `
+      <footer class="site-footer">
+        <div class="container d-flex flex-column flex-md-row justify-content-between gap-3">
+          <div>
+            <a class="navbar-brand d-inline-block mb-2" href="${root}index.html" aria-label="MovieVibe Home">
+              <img src="${root}images/logo.png" alt="MovieVibe Logo" class="brand-logo logo-dark" height="36">
+              <img src="${root}images/logo01.png" alt="MovieVibe Logo" class="brand-logo logo-light" height="36">
+            </a>
+            <p class="mb-0 mt-2">A modern movie discovery website with trailers, ratings, and details.</p>
+          </div>
+
+          <div class="footer-links">
+            <a href="${root}pages/movies.html">Browse Movies</a>
+            <a href="${root}pages/favorites.html">Favorites</a>
+            <a href="${root}pages/about.html">About</a>
+            <span class="socials">
+              <i class="bi bi-instagram"></i>
+              <i class="bi bi-twitter-x"></i>
+              <i class="bi bi-youtube"></i>
+            </span>
+          </div>
+        </div>
+
+        <div class="container copyright">
+          © 2026 MovieVibe. All movie media &amp; trailers belong to their respective copyright owners.
+        </div>
+      </footer>
+    `;
 
   const updateCount = () => {
     const count = Cinevault.getFavorites().length;

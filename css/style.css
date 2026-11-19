@@ -73,6 +73,30 @@ select {
   font-size: 16px;
   transform: rotate(8deg);
 }
+
+.brand-logo {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  vertical-align: middle;
+}
+.brand-logo.logo-light {
+  display: none !important;
+}
+.brand-logo.logo-dark {
+  display: inline-block !important;
+}
+
+[data-theme="light"] .brand-logo.logo-dark {
+  display: none !important;
+}
+[data-theme="light"] .brand-logo.logo-light {
+  display: inline-block !important;
+}
+
+.site-footer .brand-logo {
+  height: 128px;
+}
 .nav-link {
   color: var(--muted);
   font-size: 0.88rem;
