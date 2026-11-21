@@ -6,17 +6,17 @@ MovieVibe is a modern, responsive, static movie discovery website built with sem
 
 - **Pure Static Architecture**: Fully self-contained static movie catalog requiring zero external API keys or flaky live endpoints.
 - **Rich Movie Cards**:
-  - **Movie Poster (រូបភាពភាពយន្ត)**: Official high-resolution poster with responsive 2:3 aspect ratio and hover effects.
-  - **Movie Title (ចំណងជើង)**: Full movie title linked to complete detail view.
-  - **Release Year (ឆ្នាំចេញផ្សាយ)**: Official theatrical release year badge.
-  - **Genre (ប្រភេទភាពយន្ត)**: Categorical badge (Action, Sci-Fi, Drama, Animation, Crime, Comedy, Horror, Romance, etc.).
-  - **Rating (ពិន្ទុ)**: Official rating score with star icon.
-  - **Movie Description (ការពិពណ៌នា)**: Engaging summary of the film's storyline.
-  - **Duration (រយៈពេលភាពយន្ត)**: Formatted runtime (e.g. 2h 49m, 3h 00m).
-  - **Director & Cast (អ្នកដឹកនាំរឿង និងតួសំខាន់ៗ)**: Labeled director and key cast members.
-  - **Language (ភាសាដើមនៃភាពយន្ត)**: Original spoken language (English, Korean, Japanese, Spanish, etc.).
-  - **YouTube Trailer (វីដេអូ Trailer ពី YouTube)**: Dedicated trailer button that opens a responsive video modal directly from any movie card.
-- **Search Movie (ស្វែងរកភាពយន្ត)**:
+  - **Movie Poster**: Official high-resolution poster with responsive 2:3 aspect ratio and hover effects.
+  - **Movie Title**: Full movie title linked to complete detail view.
+  - **Release Year**: Official theatrical release year badge.
+  - **Genre**: Categorical badge (Action, Sci-Fi, Drama, Animation, Crime, Comedy, Horror, Romance, etc.).
+  - **Rating**: Official rating score with star icon.
+  - **Movie Description**: Engaging summary of the film's storyline.
+  - **Duration**: Formatted runtime (e.g. 2h 49m, 3h 00m).
+  - **Director & Cast**: Labeled director and key cast members.
+  - **Language**: Original spoken language (English, Korean, Japanese, Spanish, etc.).
+  - **YouTube Trailer**: Dedicated trailer button that opens a responsive video modal directly from any movie card.
+- **Search Movie**:
   - Global top navbar search input.
   - Dedicated interactive filter panel on `movies.html` with real-time multi-field search (title, genre, director, cast, language, and year).
   - Genre filter dropdown and sorting (Rating: High to Low, Rating: Low to High, Newest First, Oldest First).
@@ -24,3 +24,4 @@ MovieVibe is a modern, responsive, static movie discovery website built with sem
 - **Interactive Features**: Persistent favorites and user star ratings stored in `localStorage`, plus light/dark theme toggle.
 
 ## Link Deployed
+- **https://movie-website-hazel-rho.vercel.app/**
